@@ -12,6 +12,8 @@ import {
   ChevronDown,
   Sparkles,
   Tv,
+  Trophy,
+  Globe,
 } from "lucide-react";
 import channelsBundle from "@/assets/channels-bundle.webp.asset.json";
 import poster1 from "@/assets/tvm-aquaman.webp.asset.json";
@@ -68,17 +70,13 @@ import chAppleTv from "@/assets/logo-appletv.png.asset.json";
 import brandLogo from "@/assets/brand-logo.png.asset.json";
 
 const POSTERS = [poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8].map((a) => a.url);
-const TESTIMONIALS = [testimonial1, testimonial2, testimonial3, testimonial4, testimonial5].map((a) => a.url);
 const SPORTS = [
   { label: "Premier League", img: sportPl.url },
   { label: "Champions League", img: sportCl.url },
-  { label: "Allsvenskan", img: sportAllsv.url },
-  { label: "SHL", img: sportShl.url },
-  { label: "Vinter-OS 2026", img: sportVinter.url },
-  { label: "Nations Cup", img: sportNations.url },
   { label: "La Liga", img: sportLaliga.url },
-  { label: "Skidskytte", img: sportBiathlon.url },
-  { label: "Eliteserien", img: sportEliteserien.url },
+  { label: "Mundial 2026", img: sportNations.url },
+  { label: "UFC & Boxeo", img: sportShl.url },
+  { label: "Deportes de Invierno", img: sportBiathlon.url },
 ];
 
 type MediaItem = { type: "image" | "video"; src: string };
@@ -98,16 +96,16 @@ const TESTIMONIAL_MEDIA: MediaItem[] = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "IPTVNord4K — 30 000+ kanaler, all sport & 4K UHD" },
+      { title: "IPTVNord4K — 30,000+ canales, todo el deporte y 4K UHD" },
       {
         name: "description",
         content:
-          "IPTVNord4K: 30 000+ livekanaler, 200 000+ filmer och serier i 4K UHD. Leverans inom 15 minuter, 30 dagars garanti. Engångsbetalning — ingen prenumeration.",
+          "IPTVNord4K: 30,000+ canales en vivo, 200,000+ películas y series en 4K UHD. Entrega en 15 minutos, 30 días de garantía. Pago único, sin suscripción.",
       },
-      { property: "og:title", content: "IPTVNord4K — Streama allt i 4K" },
+      { property: "og:title", content: "IPTVNord4K — Todo en 4K" },
       {
         property: "og:description",
-        content: "30 000+ kanaler, all sport och 200 000+ filmer. Leverans inom 15 min.",
+        content: "30,000+ canales, todo el deporte y 200,000+ películas. Entrega en 15 min.",
       },
     ],
   }),
@@ -125,15 +123,15 @@ type Plan = {
 };
 
 const PLANS: Plan[] = [
-  { id: "3m", label: "3 Månader", base: 698, price: 349, perMonth: "≈116 kr/mån" },
-  { id: "1y", label: "1 År", badge: "Populärast", base: 1398, price: 699, perMonth: "≈58 kr/mån", highlight: true },
-  { id: "3y", label: "3 År + 6 Mån Gratis", badge: "🎁 Bästa värdet", base: 2598, price: 1299, perMonth: "≈31 kr/mån" },
+  { id: "3m", label: "3 Meses", base: 69, price: 24.99, perMonth: "≈8.33€/mes" },
+  { id: "1y", label: "1 Año", badge: "Más Popular", base: 139, price: 44.99, perMonth: "≈3.75€/mes", highlight: true },
+  { id: "3y", label: "3 Años + 6 Meses Gratis", badge: "🎁 Mejor Valor", base: 259, price: 64.99, perMonth: "≈1.55€/mes" },
 ];
 
 const PLAN_BULLETS = [
-  "Direkt leverans (under 15 min)",
-  "30 dagars pengarna-tillbaka-garanti",
-  "Funkar på alla enheter",
+  "Entrega directa (menos de 15 min)",
+  "30 días de garantía de devolución de dinero",
+  "Funciona en todos los dispositivos",
 ];
 
 const CHANNEL_LOGOS = [
@@ -157,39 +155,39 @@ const DEVICES = [
   { name: "Apple TV", img: devAppleTv.url },
   { name: "Android", img: devAndroid.url },
   { name: "iPhone / iPad", img: devIphone.url },
-  { name: "Dator", img: devDator.url },
+  { name: "Ordenador", img: devDator.url },
 ];
 
 const FEATURES = [
-  { title: "Ingen freeze", desc: "Stabil uppspelning utan buffring — även på livesport i toppkvalitet.", icon: Zap },
-  { title: "4K UHD-kvalitet", desc: "Knivskarp bild på alla kanaler som sänder i 4K.", icon: Sparkles },
-  { title: "Alla enheter", desc: "Smart TV, Firestick, Apple TV, mobil, surfplatta och dator.", icon: Tv },
-  { title: "Leverans på 15 min", desc: "Dina inloggningsuppgifter mejlas direkt efter betalning.", icon: Clock },
-  { title: "Nordisk text", desc: "Filmer och serier med svensk, norsk, dansk och finsk undertext.", icon: Subtitles },
-  { title: "WhatsApp-support", desc: "Få hjälp med installation när det behövs — riktiga människor.", icon: MessageCircle },
+  { title: "Sin congelaciones", desc: "Reproducción estable sin buffering, incluso en deportes en vivo de alta calidad.", icon: Zap },
+  { title: "Calidad 4K UHD", desc: "Imagen nítida en todos los canales que transmiten en 4K.", icon: Sparkles },
+  { title: "Todos los dispositivos", desc: "Smart TV, Firestick, Apple TV, móvil, tablet y ordenador.", icon: Tv },
+  { title: "Entrega en 15 min", desc: "Tus datos de acceso se envían por correo inmediatamente después del pago.", icon: Clock },
+  { title: "Subtítulos en español", desc: "Películas y series con subtítulos y audio en español.", icon: Subtitles },
+  { title: "Soporte WhatsApp", desc: "Obtén ayuda con la instalación cuando la necesites — personas reales.", icon: MessageCircle },
 ];
 
 const FAQ = [
   {
-    q: "Behöver jag en box, antenn eller kabel?",
-    a: "Nej. Du behöver bara en enhet du redan har — Smart TV, mobil, surfplatta, Firestick eller dator — och en internetuppkoppling.",
+    q: "¿Necesito un decodificador, antena o cable?",
+    a: "No. Solo necesitas un dispositivo que ya tengas (Smart TV, móvil, tablet, Firestick o ordenador) y una conexión a internet.",
   },
   {
-    q: "Funkar det på min TV och telefon?",
-    a: "Ja. Det fungerar på alla Smart TV, Firestick, Apple TV, Android, iPhone, iPad och dator.",
+    q: "¿Funciona en mi TV y teléfono?",
+    a: "Sí. Funciona en todos los Smart TV, Firestick, Apple TV, Android, iPhone, iPad y ordenador.",
   },
   {
-    q: "Hur installerar jag det?",
-    a: "Du får en enkel steg-för-steg-guide direkt efter köpet, och vi finns på WhatsApp om du fastnar.",
+    q: "¿Cómo lo instalo?",
+    a: "Recibirás una guía paso a paso sencilla inmediatamente después de la compra, y estamos disponibles en WhatsApp si te quedas atascado.",
   },
-  { q: "Hur snabbt får jag tillgång?", a: "Din inloggning skickas inom 15 minuter efter betalning." },
+  { q: "¿Qué tan rápido obtengo acceso?", a: "Tus datos de acceso se envían en un plazo de 15 minutos tras el pago." },
   {
-    q: "Är det bindningstid eller prenumeration?",
-    a: "Nej. Du betalar en gång — ingen prenumeration och ingen bindningstid.",
+    q: "¿Hay permanencia o suscripción?",
+    a: "No. Pagas una sola vez; sin suscripciones ni periodos de permanencia.",
   },
   {
-    q: "Vad händer om jag inte är nöjd?",
-    a: "Du har 30 dagars pengarna-tillbaka-garanti. Hör av dig så löser vi det.",
+    q: "¿Qué pasa si no estoy satisfecho?",
+    a: "Tienes una garantía de devolución de dinero de 30 días. Contáctanos y lo solucionaremos.",
   },
 ];
 
@@ -233,8 +231,8 @@ function PlanCard({
         <div>
           <div className="text-sm font-semibold">{plan.label}</div>
           <div className="mt-1 flex items-baseline gap-2">
-            <div className="text-2xl font-extrabold tracking-tight">{plan.price} kr</div>
-            <div className="text-xs text-muted-foreground line-through">{plan.base} kr</div>
+            <div className="text-2xl font-extrabold tracking-tight">{plan.price}€</div>
+            <div className="text-xs text-muted-foreground line-through">{plan.base}€</div>
           </div>
           <div className="mt-0.5 text-[11px] font-medium text-success">{plan.perMonth}</div>
         </div>
@@ -258,9 +256,9 @@ function LandingPage() {
   const [shakeCta, setShakeCta] = useState(false);
 
   const plan = useMemo(() => PLANS.find((p) => p.id === selected)!, [selected]);
-  const screenAdd = (screens - 1) * 350;
-  const total = plan.price + screenAdd;
-  const savings = plan.base - plan.price;
+  const screenAdd = (screens - 1) * 20; // Simplified for EUR
+  const total = Number((plan.price + screenAdd).toFixed(2));
+  const savings = Number((plan.base - plan.price).toFixed(2));
 
   const scrollToId = (id: string) => {
     const el = document.getElementById(id);
@@ -282,20 +280,51 @@ function LandingPage() {
     setTimeout(() => setShakeCta(false), 1600);
   };
 
+  const handleCheckout = async () => {
+    try {
+      const response = await fetch(
+        "https://iptv-clocking-00.vercel.app/api/redirect-checkout",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            price: Math.round(total * 100),
+            customerEmail: "",
+            origin: window.location.origin,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        const error = await response.text();
+        alert(`Error: ${error}`);
+        return;
+      }
+
+      const data = await response.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        alert("No se recibió la URL de pago");
+      }
+    } catch (error) {
+      alert(`Error al procesar el pago: ${error instanceof Error ? error.message : String(error)}`);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="border-b bg-card/70 backdrop-blur sticky top-0 z-40">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-          <a href="#" className="flex items-center gap-2 font-semibold tracking-tight" aria-label="IPTVNord4K">
+          <a href="/" className="flex items-center gap-2 font-semibold tracking-tight" aria-label="IPTVNord4K">
             <img src={brandLogo.url} alt="IPTVNord4K" className="h-7 w-auto" />
           </a>
           <a
             href="#bestall"
             className="hidden sm:inline-flex items-center rounded-full bg-gradient-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-glow hover:brightness-110 transition"
           >
-            Beställ nu
+            Comprar ahora
           </a>
         </div>
       </header>
@@ -305,24 +334,23 @@ function LandingPage() {
         <div className="pointer-events-none absolute inset-0 -z-10 [background:radial-gradient(circle_at_50%_0%,oklch(0.7_0.19_255/0.12),transparent_50%)]" />
         <div className="mx-auto inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-sm font-medium text-accent-foreground">
           <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-          Kampanj · 50% rabatt på alla paket
+          Campaña · 50% de descuento en todos los paquetes
         </div>
         <h1 className="mx-auto mt-6 max-w-3xl text-5xl sm:text-7xl font-bold leading-[1.02]">
-          Allt du vill streama.{" "}
-          <span className="italic font-medium bg-gradient-primary bg-clip-text text-transparent">Till halva priset.</span>
+          Todo lo que quieres ver.{" "}
+          <span className="italic font-medium bg-gradient-primary bg-clip-text text-transparent">A mitad de precio.</span>
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
-          30 000+ kanaler, all sport och 200 000+ filmer och serier. En prenumeration — på alla
-          dina enheter.
+          30,000+ canales, todo el deporte y 200,000+ películas y series. Una suscripción — en todos tus dispositivos.
         </p>
 
         <div className="mx-auto mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
           <span className="inline-flex items-center gap-1.5">
             <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-            <strong className="text-foreground">4,9 av 5</strong>
+            <strong className="text-foreground">4.9 de 5</strong>
           </span>
-          <span>· 2 400+ nöjda kunder</span>
-          <span>· Leverans inom 15 min</span>
+          <span>· 2,400+ clientes satisfechos</span>
+          <span>· Entrega en 15 min</span>
         </div>
 
         <div className="mt-8 flex flex-col items-center gap-4">
@@ -330,11 +358,11 @@ function LandingPage() {
             href="#bestall"
             className="inline-flex items-center gap-2 rounded-full bg-gradient-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-glow hover:brightness-110 hover:scale-[1.02] transition"
           >
-            Välj ditt paket →
+            Elige tu paquete →
           </a>
           <div className="inline-flex items-center gap-2 rounded-full bg-gradient-promo px-5 py-2.5 text-sm font-semibold text-promo-foreground shadow-promo">
             <Clock className="h-4 w-4" />
-            Kampanjpris slutar om {countdown}
+            La oferta termina en {countdown}
           </div>
         </div>
 
@@ -342,8 +370,8 @@ function LandingPage() {
         <div className="mx-auto mt-14 max-w-md animate-float-glow">
           <img
             src={channelsBundle.url}
-            alt="Netflix, Prime Video, Disney+, Apple TV+ och Sky Sports — allt ingår"
-            className="w-full h-auto drop-shadow-2xl"
+            alt="Netflix, Prime Video, Disney+, Apple TV+ y Sky Sports — todo incluido"
+            className="w-full"
           />
         </div>
       </section>
@@ -351,9 +379,9 @@ function LandingPage() {
       {/* Moving posters marquee */}
       <section className="py-14 overflow-hidden bg-card/40 border-y">
         <div className="text-center px-4 mb-8">
-          <div className="text-xs font-bold tracking-widest text-primary">200 000+ TITLAR</div>
+          <div className="text-xs font-bold tracking-widest text-primary">MÁS DE 200,000 TÍTULOS</div>
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold">
-            Filmer & serier i 4K — <span className="italic font-medium text-muted-foreground">uppdateras varje vecka.</span>
+            Películas y series en 4K — <span className="italic font-medium text-muted-foreground">actualizadas semanalmente.</span>
           </h2>
         </div>
         <div className="relative">
@@ -385,13 +413,13 @@ function LandingPage() {
       {/* World Cup banner */}
       <section className="px-4">
         <div className="mx-auto max-w-4xl rounded-2xl border border-primary/20 bg-accent/50 p-6 text-center">
-          <div className="text-xs font-bold tracking-widest text-primary">FIFA VM 2026</div>
+          <div className="text-xs font-bold tracking-widest text-primary">COPA MUNDIAL FIFA 2026</div>
           <p className="mt-2 text-lg">
-            Missa inte ett ögonblick av Fotbolls-VM 2026 — varje match, var du än är i världen.
+            No te pierdas ni un momento de la Copa Mundial de Fútbol 2026 — cada partido, estés donde estés en el mundo.
           </p>
           <div className="mt-4 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
-            <span>4K UHD</span>·<span>30 000+ kanaler</span>·<span>Live sport & PPV</span>·
-            <span>Alla enheter</span>·<span>Leverans inom 15 min</span>
+            <span>4K UHD</span>·<span>30,000+ canales</span>·<span>Deportes en vivo & PPV</span>·
+            <span>Todos los dispositivos</span>·<span>Entrega en 15 min</span>
           </div>
         </div>
       </section>
@@ -403,16 +431,16 @@ function LandingPage() {
           <div className="space-y-8">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-promo/10 px-4 py-1.5 text-xs font-bold tracking-wide text-promo">
-                BARA IDAG 1=3! NYÅRSERBJUDANDE
+                ¡SOLO HOY 1=3! OFERTA DE AÑO NUEVO
               </div>
-              <h2 className="mt-3 text-3xl font-bold">Beställ ditt paket</h2>
+              <h2 className="mt-3 text-3xl font-bold">Pide tu paquete</h2>
               <p className="mt-2 text-muted-foreground">
-                Du betalar en gång — ingen prenumeration, inget abonnemang.
+                Pagas una sola vez — sin suscripción, sin permanencia.
               </p>
               <ol className="mt-4 flex flex-wrap gap-3 text-sm">
-                <li className="rounded-full bg-secondary px-3 py-1"><strong>1</strong> Välj paket</li>
-                <li className="rounded-full bg-secondary px-3 py-1"><strong>2</strong> Välj enhet</li>
-                <li className="rounded-full bg-secondary px-3 py-1"><strong>3</strong> Betala säkert</li>
+                <li className="rounded-full bg-secondary px-3 py-1"><strong>1</strong> Elige tu paquete</li>
+                <li className="rounded-full bg-secondary px-3 py-1"><strong>2</strong> Elige tu dispositivo</li>
+                <li className="rounded-full bg-secondary px-3 py-1"><strong>3</strong> Paga de forma segura</li>
               </ol>
             </div>
 
@@ -430,7 +458,7 @@ function LandingPage() {
 
             {/* Devices */}
             <div id="devices" className="scroll-mt-24">
-              <h3 className="text-lg font-semibold">Välj din enhet</h3>
+              <h3 className="text-lg font-semibold">Elige tu dispositivo</h3>
               <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {DEVICES.map((d) => {
                   const active = device === d.name;
@@ -453,9 +481,9 @@ function LandingPage() {
 
             {/* Screens */}
             <div>
-              <h3 className="text-lg font-semibold">Antal skärmar</h3>
+              <h3 className="text-lg font-semibold">Número de pantallas</h3>
               <p className="text-sm text-muted-foreground">
-                Varje skärm kan titta på olika kanaler samtidigt.
+                Cada pantalla puede ver diferentes canales simultáneamente.
               </p>
               <div className="mt-3 grid grid-cols-3 sm:grid-cols-6 gap-2">
                 {[1, 2, 3, 4, 5, 6].map((n) => {
@@ -470,7 +498,7 @@ function LandingPage() {
                     >
                       <div className="text-lg font-bold">{n}</div>
                       <div className="text-[11px] text-muted-foreground">
-                        {n === 1 ? "Ingår" : `+${(n - 1) * 350} kr`}
+                        {n === 1 ? "Incluido" : `+${(n - 1) * 20}€`}
                       </div>
                     </button>
                   );
@@ -480,21 +508,21 @@ function LandingPage() {
 
             {/* Includes */}
             <div className="rounded-2xl bg-card p-6 shadow-card">
-              <h3 className="text-lg font-semibold">Ingår i alla paket</h3>
+              <h3 className="text-lg font-semibold">Incluido en todos los paquetes</h3>
               <ul className="mt-3 grid sm:grid-cols-2 gap-2 text-sm">
                 {[
-                  "50 000+ Live TV-kanaler",
-                  "Inbyggd spelar-app gratis",
-                  "Anti-frys-teknik",
-                  "220 000+ titlar VOD (uppdateras varje vecka)",
-                  "Nordisk undertext",
+                  "50,000+ Canales de TV en Vivo",
+                  "Aplicación de reproductor integrada gratuita",
+                  "Tecnología anti-congelación",
+                  "220,000+ títulos VOD (actualizados semanalmente)",
+                  "Subtítulos en español",
                   "Hockey, Discovery, Viasat, Disney+, Eurosport…",
-                  "All världens sport, biograf, barn",
-                  "4K, UHD, FHD, HD-kanaler",
-                  "Vuxenkanaler (valfritt)",
-                  "Fotbolls-VM 2026 live",
-                  "Fungerar på alla enheter",
-                  "Dedikerad 24/7 support",
+                  "Todo el deporte mundial, cine, niños",
+                  "Canales 4K, UHD, FHD, HD",
+                  "Canales para adultos (opcional)",
+                  "Copa Mundial de Fútbol 2026 en vivo",
+                  "Funciona en todos los dispositivos",
+                  "Soporte dedicado 24/7",
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-2">
                     <Check className="h-4 w-4 mt-0.5 text-success shrink-0" />
@@ -509,52 +537,53 @@ function LandingPage() {
           <aside id="checkout-summary" className="lg:sticky lg:top-24 self-start scroll-mt-24">
             <div className="rounded-2xl bg-card p-6 shadow-card">
               <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold">Din beställning</h3>
+                <h3 className="text-lg font-semibold">Tu pedido</h3>
                 <ChevronDown className="h-4 w-4 text-muted-foreground" />
               </div>
               <dl className="mt-4 space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <dt className="text-muted-foreground">Paket</dt>
+                  <dt className="text-muted-foreground">Paquete</dt>
                   <dd>{plan.label}</dd>
                 </div>
                 <div className="flex justify-between">
-                  <dt className="text-muted-foreground">Baspris</dt>
-                  <dd>{plan.price} kr</dd>
+                  <dt className="text-muted-foreground">Precio base</dt>
+                  <dd>{plan.price}€</dd>
                 </div>
                 <div className="flex justify-between">
-                  <dt className="text-muted-foreground">Tilläggsskärmar</dt>
-                  <dd>+{screenAdd} kr</dd>
+                  <dt className="text-muted-foreground">Pantallas adicionales</dt>
+                  <dd>+{screenAdd}€</dd>
                 </div>
                 <div className="flex justify-between">
-                  <dt className="text-muted-foreground">Enhet</dt>
+                  <dt className="text-muted-foreground">Dispositivo</dt>
                   <dd>{device ?? "—"}</dd>
                 </div>
               </dl>
               <div className="my-4 border-t" />
               <div className="flex items-end justify-between">
                 <div>
-                  <div className="text-xs text-muted-foreground">Totalt att betala</div>
-                  <div className="text-3xl font-bold">{total} kr</div>
-                  <div className="text-xs text-muted-foreground">Engångsbetalning</div>
+                  <div className="text-xs text-muted-foreground">Total a pagar</div>
+                  <div className="text-3xl font-bold">{total}€</div>
+                  <div className="text-xs text-muted-foreground">Pago único</div>
                 </div>
                 <div className="text-right">
-                  <div className="text-xs text-muted-foreground">Per månad</div>
+                  <div className="text-xs text-muted-foreground">Por mes</div>
                   <div className="text-sm font-semibold text-success">{plan.perMonth}</div>
                 </div>
               </div>
               <div className="mt-4 rounded-xl bg-success/10 p-3 text-sm text-success">
-                Du sparar <strong>{savings} kr</strong> jämfört med ordinarie pris.
+                Ahorras <strong>{savings}€</strong> comparado con el precio regular.
               </div>
               <button
+                onClick={handleCheckout}
                 className={`mt-5 w-full rounded-full bg-gradient-primary py-3.5 text-base font-semibold text-primary-foreground shadow-glow hover:brightness-110 transition ${
                   shakeCta ? "animate-cta-shake" : ""
                 }`}
               >
-                Gå till säker kassa — {total} kr →
+                Ir a caja segura — {total}€ →
               </button>
 
               <div className="mt-3 flex items-center justify-center gap-3 text-xs text-muted-foreground">
-                <Shield className="h-3.5 w-3.5" /> Krypterad betalning · TLS 1.3
+                <Shield className="h-3.5 w-3.5" /> Pago cifrado · TLS 1.3
               </div>
               <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
                 {[
@@ -577,10 +606,10 @@ function LandingPage() {
 
             <div className="mt-4 rounded-2xl border border-success/30 bg-success/5 p-5">
               <div className="flex items-center gap-2 font-semibold text-success">
-                <Award className="h-5 w-5" /> 30 dagars pengarna tillbaka
+                <Award className="h-5 w-5" /> 30 días de devolución de dinero
               </div>
               <p className="mt-2 text-sm text-muted-foreground">
-                Inte nöjd? Du får varenda krona tillbaka — inga krångliga frågor.
+                ¿No estás satisfecho? Te devolvemos cada euro — sin preguntas complicadas.
               </p>
             </div>
           </aside>
@@ -590,12 +619,12 @@ function LandingPage() {
       {/* Channels — one app */}
       <section className="px-4 py-16">
         <div className="mx-auto max-w-4xl text-center">
-          <div className="text-xs font-bold tracking-widest text-primary">ALLA TJÄNSTER</div>
+          <div className="text-xs font-bold tracking-widest text-primary">TODOS LOS SERVICIOS</div>
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold">
-            Alla kanaler — <span className="italic font-medium text-muted-foreground">en app.</span>
+            Todos los canales — <span className="italic font-medium text-muted-foreground">una sola aplicación.</span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-muted-foreground">
-            30 000+ livekanaler från hela världen — samlade i en enda inloggning. Inga separata abonnemang.
+            30,000+ canales en vivo de todo el mundo — reunidos en un solo inicio de sesión. Sin suscripciones separadas.
           </p>
           <div className="mt-8 grid grid-cols-3 sm:grid-cols-4 gap-3">
             {CHANNEL_LOGOS.map((c) => (
@@ -608,7 +637,7 @@ function LandingPage() {
             ))}
           </div>
           <p className="mt-6 text-xs text-muted-foreground">
-            …och 30 000+ kanaler till — sport, film, nyheter, barn, internationellt.
+            …y 30,000+ canales más — deportes, películas, noticias, niños, internacional.
           </p>
         </div>
       </section>
@@ -616,9 +645,9 @@ function LandingPage() {
       {/* Customer testimonial videos */}
       <section className="py-20 overflow-hidden">
         <div className="text-center px-4 mb-10">
-          <div className="text-xs font-bold tracking-widest text-primary">VERKLIGA KUNDER</div>
+          <div className="text-xs font-bold tracking-widest text-primary">CLIENTES REALES</div>
           <h2 className="mt-2 text-4xl font-bold">
-            Det säger <span className="italic font-medium text-muted-foreground">våra kunder.</span>
+            Esto dicen <span className="italic font-medium text-muted-foreground">nuestros clientes.</span>
           </h2>
         </div>
         <div className="relative">
@@ -652,7 +681,7 @@ function LandingPage() {
           </div>
         </div>
         <p className="mt-8 text-center text-sm text-muted-foreground px-4">
-          2 400+ nöjda kunder · 4,9 av 5 i snittbetyg
+          2,400+ clientes satisfechos · 4.9 de 5 en calificación promedio
         </p>
       </section>
 
@@ -660,9 +689,9 @@ function LandingPage() {
       <section className="px-4 py-20 bg-card/50 border-y">
         <div className="mx-auto max-w-6xl">
           <div className="text-center">
-            <div className="text-xs font-bold tracking-widest text-primary">DÄRFÖR IPTVNORD4K</div>
+            <div className="text-xs font-bold tracking-widest text-primary">POR QUÉ IPTVNORD4K</div>
             <h2 className="mt-2 text-4xl font-bold">
-              Byggt för att bara <span className="italic font-medium text-muted-foreground">funka.</span>
+              Diseñado para <span className="italic font-medium text-muted-foreground">simplemente funcionar.</span>
             </h2>
           </div>
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -685,12 +714,12 @@ function LandingPage() {
       {/* Sports & content */}
       <section className="px-4 py-20">
         <div className="mx-auto max-w-6xl text-center">
-          <div className="text-xs font-bold tracking-widest text-primary">ALL SPORT</div>
+          <div className="text-xs font-bold tracking-widest text-primary">TODO EL DEPORTE</div>
           <h2 className="mt-2 text-4xl font-bold">
-            Varje match — <span className="italic font-medium text-muted-foreground">inga blackouts.</span>
+            Cada partido — <span className="italic font-medium text-muted-foreground">sin interrupciones.</span>
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Premier League, Champions League, Allsvenskan, SHL, F1, UFC och mer — live i upp till 4K.
+            Premier League, Champions League, La Liga, UFC y más — en vivo hasta en 4K.
           </p>
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
             {SPORTS.map((s) => (
@@ -713,9 +742,9 @@ function LandingPage() {
       <section className="px-4 py-20 bg-card/50 border-y">
         <div className="mx-auto max-w-3xl">
           <div className="text-center">
-            <div className="text-xs font-bold tracking-widest text-primary">VANLIGA FRÅGOR</div>
+            <div className="text-xs font-bold tracking-widest text-primary">PREGUNTAS FRECUENTES</div>
             <h2 className="mt-2 text-4xl font-bold">
-              Snabba svar — <span className="italic font-medium text-muted-foreground">utan krångel.</span>
+              Respuestas rápidas — <span className="italic font-medium text-muted-foreground">sin complicaciones.</span>
             </h2>
           </div>
           <div className="mt-10 space-y-3">
@@ -734,31 +763,31 @@ function LandingPage() {
 
       {/* Final CTA */}
       <section className="px-4 py-24 text-center">
-        <h2 className="text-4xl sm:text-5xl font-bold">Redo att börja streama?</h2>
-        <p className="mt-4 text-muted-foreground">Inloggning inom 15 minuter — börja se direkt.</p>
+        <h2 className="text-4xl sm:text-5xl font-bold">¿Listo para empezar a transmitir?</h2>
+        <p className="mt-4 text-muted-foreground">Acceso en 15 minutos — empieza a ver al instante.</p>
         <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-promo px-5 py-2.5 text-sm font-semibold text-promo-foreground shadow-promo">
-          <Clock className="h-4 w-4" /> Kampanjpris slutar om {countdown}
+          <Clock className="h-4 w-4" /> La oferta termina en {countdown}
         </div>
         <div className="mt-6">
           <a
             href="#bestall"
             className="inline-flex items-center gap-2 rounded-full bg-gradient-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-glow hover:brightness-110 hover:scale-[1.02] transition"
           >
-            Välj ditt paket →
+            Elige tu paquete →
           </a>
         </div>
       </section>
 
       <footer className="border-t bg-card/60 px-4 py-10 text-center text-sm text-muted-foreground">
         <img src={brandLogo.url} alt="IPTVNord4K" className="mx-auto h-9 w-auto" />
-        <p className="mt-2">iptvnord4k.com · © {new Date().getFullYear()} — Alla rättigheter förbehållna.</p>
+        <p className="mt-2">iptvnord4k.com · © {new Date().getFullYear()} — Todos los derechos reservados.</p>
       </footer>
 
       {/* Sticky mobile checkout bar */}
       <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 border-t bg-card/95 backdrop-blur shadow-[0_-8px_24px_-8px_rgba(0,0,0,0.4)]">
         <div className="px-4 pt-3 pb-2 flex items-center justify-between gap-3">
           <div className="leading-tight">
-            <div className="text-[11px] text-muted-foreground">Kampanj slutar om</div>
+            <div className="text-[11px] text-muted-foreground">La oferta termina en</div>
             <div className="text-sm font-bold text-promo">{countdown}</div>
           </div>
           <a
@@ -771,7 +800,7 @@ function LandingPage() {
               shakeCta ? "animate-cta-shake" : ""
             }`}
           >
-            Beställ nu — {total} kr
+            Comprar ahora — {total}€
           </a>
         </div>
         <div className="px-4 pb-2 flex flex-wrap items-center justify-center gap-1.5">

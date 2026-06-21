@@ -78,16 +78,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "IPTVNORD4K" },
-      { name: "description", content: "30 000+ kanaler, all sport, 200 000+ filmer och serier. En enda prenumeration — på alla dina enheter." },
+      { title: "IPTVNord4K — 30,000+ canales, todo el deporte y 4K UHD" },
+      { name: "description", content: "30,000+ canales en vivo, 200,000+ películas y series en 4K UHD. Entrega en 15 minutos, 30 días de garantía. Pago único, sin suscripción." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "IPTVNORD4K" },
-      { property: "og:description", content: "30 000+ kanaler, all sport, 200 000+ filmer och serier. En enda prenumeration — på alla dina enheter." },
+      { property: "og:title", content: "IPTVNord4K — 30,000+ canales, todo el deporte y 4K UHD" },
+      { property: "og:description", content: "30,000+ canales en vivo, 200,000+ películas y series en 4K UHD. Entrega en 15 minutos, 30 días de garantía. Pago único, sin suscripción." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "IPTVNORD4K" },
-      { name: "twitter:description", content: "30 000+ kanaler, all sport, 200 000+ filmer och serier. En enda prenumeration — på alla dina enheter." },
+      { name: "twitter:title", content: "IPTVNord4K — 30,000+ canales, todo el deporte y 4K UHD" },
+      { name: "twitter:description", content: "30,000+ canales en vivo, 200,000+ películas y series en 4K UHD. Entrega en 15 minutos, 30 días de garantía. Pago único, sin suscripción." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4ffcb9e7-3d7a-49fa-8ddc-d96e9c77759f/id-preview-9d7ba5d2--9631efbf-48c8-48dc-9fa1-85f99e79f825.lovable.app-1781375285964.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4ffcb9e7-3d7a-49fa-8ddc-d96e9c77759f/id-preview-9d7ba5d2--9631efbf-48c8-48dc-9fa1-85f99e79f825.lovable.app-1781375285964.png" },
     ],
@@ -108,7 +108,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <HeadContent />
       </head>
