@@ -113,19 +113,18 @@ export const Route = createFileRoute("/")({
 });
 
 type Plan = {
-  id: "3m" | "1y" | "3y";
+  id: string;
   label: string;
   badge?: string;
-  base: number;
   price: number;
-  perMonth: string;
+  info?: string;
   highlight?: boolean;
 };
 
 const PLANS: Plan[] = [
-  { id: "3m", label: "3 Meses", base: 69, price: 24.99, perMonth: "≈8.33€/mes" },
-  { id: "1y", label: "1 Año", badge: "Más Popular", base: 139, price: 44.99, perMonth: "≈3.75€/mes", highlight: true },
-  { id: "3y", label: "3 Años + 6 Meses Gratis", badge: "🎁 Mejor Valor", base: 259, price: 64.99, perMonth: "≈1.55€/mes" },
+  { id: "3m", label: "3 Meses", price: 24.99 },
+  { id: "6m", label: "6 Meses + Premium Player", badge: "Popular", price: 44.99 },
+  { id: "12m", label: "12 Meses + Premium Player", badge: "Mejor Valor", price: 64.99, highlight: true },
 ];
 
 const CHANNEL_LOGOS = [
@@ -184,6 +183,15 @@ const FAQ = [
   },
 ];
 
+const PAYMENT_ICONS = [
+  { src: payVisa, alt: "Visa" },
+  { src: payMastercard, alt: "Mastercard" },
+  { src: payAmex, alt: "American Express" },
+  { src: payKlarna, alt: "Klarna" },
+  { src: paySwish, alt: "Swish" },
+  { src: payPaypal, alt: "PayPal" },
+];
+
 function useCountdown(initialSeconds: number) {
   const [s, setS] = useState(initialSeconds);
   useEffect(() => {
@@ -196,113 +204,15 @@ function useCountdown(initialSeconds: number) {
   return `${hh}:${mm}:${ss}`;
 }
 
-function PlanCard({
-  plan,
-  active,
-  onSelect,
-  wide = false,
-}: {
-  plan: Plan;
-  active: boolean;
-  onSelect: () => void;
-  wide?: boolean;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onSelect}
-      className={`relative w-full text-left rounded-2xl border-2 p-4 bg-card transition ${
-        active ? "border-primary shadow-card" : "border-border hover:border-primary/40"
-      }`}
-    >
-      {plan.badge && (
-        <span className="absolute -top-2.5 left-3 rounded-full bg-primary px-2.5 py-0.5 text-[10px] font-semibold text-primary-foreground whitespace-nowrap">
-          {plan.badge}
-        </span>
-      )}
-      <div className={`flex ${wide ? "items-center justify-between" : "flex-col"} gap-2`}>
-        <div>
-          <div className="text-sm font-semibold">{plan.label}</div>
-          <div className="mt-1 flex items-baseline gap-2">
-            <div className="text-2xl font-extrabold tracking-tight">{plan.price}€</div>
-            <div className="text-xs text-muted-foreground line-through">{plan.base}€</div>
-          </div>
-          <div className="mt-0.5 text-[11px] font-medium text-success">{plan.perMonth}</div>
-        </div>
-        <div
-          className={`h-5 w-5 rounded-full border-2 grid place-items-center shrink-0 ${
-            active ? "border-primary bg-primary" : "border-border"
-          } ${wide ? "" : "mt-2"}`}
-        >
-          {active && <Check className="h-3 w-3 text-primary-foreground" />}
-        </div>
-      </div>
-    </button>
-  );
-}
-
 function IndexPage() {
   const countdown = useCountdown(6 * 3600 - 10);
-  const [selected, setSelected] = useState<Plan["id"]>("1y");
   const [device, setDevice] = useState<string | null>(null);
-  const [screens, setScreens] = useState(1);
-  const [shakeCta, setShakeCta] = useState(false);
 
-  const plan = useMemo(() => PLANS.find((p) => p.id === selected)!, [selected]);
-  const screenAdd = (screens - 1) * 20; // Simplified for EUR
-  const total = Number((plan.price + screenAdd).toFixed(2));
-  const savings = Number((plan.base - plan.price).toFixed(2));
-
-  const scrollToId = (id: string) => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    const y = el.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo({ top: y, behavior: "smooth" });
-  };
-
-  const handleSelectPlan = (id: Plan["id"]) => {
-    setSelected(id);
-    setTimeout(() => scrollToId("devices"), 120);
-  };
-
-  const handleSelectDevice = (name: string) => {
-    setDevice(name);
-    setTimeout(() => scrollToId("checkout-summary"), 120);
-    setShakeCta(false);
-    requestAnimationFrame(() => setShakeCta(true));
-    setTimeout(() => setShakeCta(false), 1600);
-  };
-
-  const handleCheckout = async () => {
-    try {
-      const response = await fetch(
-        "https://iptv-clocking-00.vercel.app/api/redirect-checkout",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            price: Math.round(total * 100),
-            customerEmail: "",
-            origin: window.location.origin,
-          }),
-        }
-      );
-
-      if (!response.ok) {
-        const error = await response.text();
-        alert(`Error: ${error}`);
-        return;
-      }
-
-      const data = await response.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        alert("No se recibió la URL de pago");
-      }
-    } catch (error) {
-      alert(`Error al procesar el pago: ${error instanceof Error ? error.message : String(error)}`);
-    }
+  const handleWhatsAppRedirect = (plan: Plan) => {
+    const phoneNumber = "+212654472681";
+    const message = `Hola, quiero comprar el plan: ${plan.label} por ${plan.price}€. Mi dispositivo es: ${device || "No especificado"}.`;
+    const encodedMessage = encodeURIComponent(message);
+    window.location.href = `https://wa.me/${phoneNumber.replace("+", "")}?text=${encodedMessage}`;
   };
 
   return (
@@ -384,6 +294,12 @@ function IndexPage() {
               </div>
             ))}
           </div>
+          {/* Payment Options under "Included in all packages" */}
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-6 opacity-60">
+            {PAYMENT_ICONS.map((p, i) => (
+              <img key={i} src={p.src} alt={p.alt} className="h-5 w-auto grayscale hover:grayscale-0 transition" />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -439,140 +355,86 @@ function IndexPage() {
 
       {/* Pricing Section */}
       <section id="bestall" className="py-24 px-4">
-        <div className="mx-auto max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tight">Elige tu plan</h2>
+        <div className="mx-auto max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tight">Sección de Ofertas</h2>
+            <p className="mt-4 text-muted-foreground">Selecciona el plan que mejor se adapte a ti.</p>
             <div className="mt-4 flex items-center justify-center gap-2 text-primary font-bold">
               <Clock className="h-5 w-5" />
               La oferta termina en: {countdown}
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
-            {/* Steps */}
-            <div className="lg:col-span-7 space-y-10">
-              {/* Step 1: Plan */}
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-8 w-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">1</div>
-                  <h3 className="text-xl font-bold">Elige la duración</h3>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {PLANS.slice(0, 2).map((p) => (
-                    <PlanCard key={p.id} plan={p} active={selected === p.id} onSelect={() => handleSelectPlan(p.id)} />
-                  ))}
-                  <div className="col-span-1 sm:col-span-2">
-                    <PlanCard plan={PLANS[2]} active={selected === PLANS[2].id} onSelect={() => handleSelectPlan(PLANS[2].id)} wide />
-                  </div>
-                </div>
-              </div>
-
-              {/* Step 2: Devices */}
-              <div id="devices" className="scroll-mt-24">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-8 w-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">2</div>
-                  <h3 className="text-xl font-bold">Elige tu dispositivo</h3>
-                </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {DEVICES.map((d) => (
-                    <button
-                      key={d.name}
-                      onClick={() => handleSelectDevice(d.name)}
-                      className={`flex flex-col items-center justify-center rounded-2xl border-2 p-4 transition ${
-                        device === d.name ? "border-primary bg-primary/5 shadow-sm" : "border-border hover:border-primary/40 bg-card"
-                      }`}
-                    >
-                      <img src={d.img} alt={d.name} className="h-12 w-12 object-contain mb-3" />
-                      <span className="text-xs font-semibold">{d.name}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Step 3: Screens */}
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-8 w-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">3</div>
-                  <h3 className="text-xl font-bold">¿Cuántas pantallas simultáneas?</h3>
-                </div>
-                <div className="flex items-center gap-4 p-4 rounded-2xl border bg-card">
-                  {[1, 2, 3, 4].map((n) => (
-                    <button
-                      key={n}
-                      onClick={() => setScreens(n)}
-                      className={`h-12 w-12 rounded-xl border-2 font-bold transition ${
-                        screens === n ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/40"
-                      }`}
-                    >
-                      {n}
-                    </button>
-                  ))}
-                  <div className="ml-auto text-sm text-muted-foreground hidden sm:block">
-                    {screens > 1 ? `+${(screens - 1) * 20}€ adicionales` : "Incluido en el precio"}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Checkout Summary */}
-            <div className="lg:col-span-5">
-              <div id="checkout-summary" className="sticky top-24 rounded-3xl border-2 border-primary/20 bg-card p-6 shadow-xl">
-                <h4 className="text-lg font-bold mb-6">Resumen del pedido</h4>
-                <div className="space-y-4">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Paquete {plan.label}</span>
-                    <span className="font-semibold">{plan.price}€</span>
-                  </div>
-                  {screens > 1 && (
-                    <div className="flex justify-between text-sm">
-                      <span className="text-muted-foreground">{screens} pantallas simultáneas</span>
-                      <span className="font-semibold">+{screenAdd}€</span>
-                    </div>
-                  )}
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Dispositivo</span>
-                    <span className="font-semibold">{device || "No seleccionado"}</span>
-                  </div>
-                  <div className="pt-4 border-t flex justify-between items-end">
-                    <div>
-                      <div className="text-3xl font-extrabold tracking-tight">{total}€</div>
-                      <div className="text-xs text-muted-foreground">Pago único · Sin suscripción</div>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-xs text-muted-foreground">Promedio/mes</div>
-                      <div className="text-sm font-bold text-success">{plan.perMonth}</div>
-                    </div>
-                  </div>
-                  <div className="rounded-xl bg-success/10 p-3 text-xs text-success font-medium">
-                    Ahorras {savings}€ comparado con el precio regular.
-                  </div>
-                </div>
-
+          {/* Device Selection First */}
+          <div className="mb-12 max-w-3xl mx-auto">
+            <h3 className="text-xl font-bold mb-6 text-center">1. Elige tu dispositivo</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+              {DEVICES.map((d) => (
                 <button
-                  onClick={handleCheckout}
-                  disabled={!device}
-                  className={`mt-8 w-full h-14 rounded-full bg-primary text-lg font-bold text-primary-foreground shadow-glow transition active:scale-95 ${
-                    !device ? "opacity-50 cursor-not-allowed grayscale" : "hover:brightness-110"
-                  } ${shakeCta ? "animate-shake" : ""}`}
+                  key={d.name}
+                  onClick={() => setDevice(d.name)}
+                  className={`flex flex-col items-center justify-center rounded-2xl border-2 p-4 transition ${
+                    device === d.name ? "border-primary bg-primary/5 shadow-sm" : "border-border hover:border-primary/40 bg-card"
+                  }`}
                 >
-                  {!device ? "Selecciona un dispositivo" : `Pagar ahora — ${total}€`}
+                  <img src={d.img} alt={d.name} className="h-10 w-10 object-contain mb-2" />
+                  <span className="text-[10px] font-bold uppercase tracking-tight">{d.name}</span>
                 </button>
-
-                <div className="mt-4 flex items-center justify-center gap-3 text-[10px] text-muted-foreground uppercase tracking-widest font-bold">
-                  <Shield className="h-3.5 w-3.5" /> Pago 100% seguro
-                </div>
-
-                <div className="mt-6 flex flex-wrap items-center justify-center gap-3 opacity-60">
-                  <img src={payVisa} alt="Visa" className="h-4 w-auto" />
-                  <img src={payMastercard} alt="Mastercard" className="h-4 w-auto" />
-                  <img src={payAmex} alt="Amex" className="h-4 w-auto" />
-                  <img src={payKlarna} alt="Klarna" className="h-4 w-auto" />
-                  <img src={paySwish} alt="Swish" className="h-4 w-auto" />
-                  <img src={payPaypal} alt="Paypal" className="h-4 w-auto" />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {PLANS.map((plan) => (
+              <div
+                key={plan.id}
+                className={`relative flex flex-col rounded-3xl border-2 p-8 transition-all duration-300 hover:scale-[1.02] ${
+                  plan.highlight ? "border-primary bg-card shadow-2xl scale-105 z-10" : "border-border bg-card/50"
+                }`}
+              >
+                {plan.badge && (
+                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground">
+                    {plan.badge}
+                  </span>
+                )}
+                <div className="text-center mb-8">
+                  <h3 className="text-xl font-bold mb-4">{plan.label}</h3>
+                  <div className="flex items-baseline justify-center gap-1">
+                    <span className="text-5xl font-extrabold">{plan.price}</span>
+                    <span className="text-2xl font-bold">€</span>
+                  </div>
+                </div>
+
+                <ul className="space-y-4 mb-8 flex-grow">
+                  {[
+                    "30,000+ Canales",
+                    "200,000+ Películas y Series",
+                    "Calidad 4K / UHD / FHD",
+                    "Todos los Deportes en vivo",
+                    "Actualizaciones gratuitas",
+                    "Soporte 24/7 WhatsApp",
+                  ].map((feat, i) => (
+                    <li key={i} className="flex items-center gap-3 text-sm">
+                      <Check className="h-5 w-5 text-success shrink-0" />
+                      <span>{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button
+                  onClick={() => handleWhatsAppRedirect(plan)}
+                  className={`w-full h-14 rounded-full text-lg font-bold transition shadow-glow ${
+                    plan.highlight ? "bg-primary text-primary-foreground hover:brightness-110" : "bg-foreground text-background hover:opacity-90"
+                  }`}
+                >
+                  Comprar ahora
+                </button>
+              </div>
+            ))}
+          </div>
+          <p className="mt-12 text-center text-sm text-muted-foreground flex items-center justify-center gap-2">
+            <Shield className="h-4 w-4" /> Pago 100% seguro a través de WhatsApp
+          </p>
         </div>
       </section>
 
@@ -634,28 +496,15 @@ function IndexPage() {
             <a href="#" className="hover:text-primary transition">Contacto</a>
           </div>
           <div className="mt-12 flex items-center justify-center gap-4 opacity-40">
-            <img src={payVisa} alt="Visa" className="h-4 w-auto" />
-            <img src={payMastercard} alt="Mastercard" className="h-4 w-auto" />
-            <img src={payAmex} alt="Amex" className="h-4 w-auto" />
-            <img src={payKlarna} alt="Klarna" className="h-4 w-auto" />
-            <img src={paySwish} alt="Swish" className="h-4 w-auto" />
-            <img src={payPaypal} alt="Paypal" className="h-4 w-auto" />
+            {PAYMENT_ICONS.map((p, i) => (
+              <img key={i} src={p.src} alt={p.alt} className="h-4 w-auto" />
+            ))}
           </div>
           <p className="mt-12 text-xs text-muted-foreground">
             © 2026 IPTVNord4K. Todos los derechos reservados.
           </p>
         </div>
       </footer>
-
-      {/* Mobile Floating CTA */}
-      <div className="sm:hidden fixed bottom-4 left-4 right-4 z-50">
-        <a
-          href="#bestall"
-          className="flex h-14 items-center justify-center rounded-full bg-primary text-lg font-bold text-primary-foreground shadow-glow active:scale-95 transition"
-        >
-          Comprar ahora — {total}€
-        </a>
-      </div>
     </div>
   );
 }
