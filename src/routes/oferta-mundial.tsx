@@ -15,82 +15,82 @@ import {
   Trophy,
   Globe,
 } from "lucide-react";
-import channelsBundle from "@/assets/channels-bundle.webp.asset.json";
-import poster1 from "@/assets/tvm-aquaman.webp.asset.json";
-import poster2 from "@/assets/tvm-oppenheimer.webp.asset.json";
-import poster3 from "@/assets/tvm-red-one.webp.asset.json";
-import poster4 from "@/assets/tvm-venom-last-dance.webp.asset.json";
-import poster5 from "@/assets/tvm-1QdXdRYfktUSONkl1oD5gc6Be0s.webp.asset.json";
-import poster6 from "@/assets/tvm-36xXlhEpQqVVPuiZhfoQuaY4OlA.webp.asset.json";
-import poster7 from "@/assets/tvm-hE3LRZAY84fG19a18pzpkZERjTE.webp.asset.json";
-import poster8 from "@/assets/tvm-iDHzRALtZCzHVmx7uyjTTKvMAPB.webp.asset.json";
-import testimonial1 from "@/assets/tvm-customer-review-1.webp.asset.json";
-import testimonial2 from "@/assets/tvm-customer-review-2.webp.asset.json";
-import testimonial3 from "@/assets/tvm-customer-review-3.webp.asset.json";
-import testimonial4 from "@/assets/tvm-customer-review-4.webp.asset.json";
-import testimonial5 from "@/assets/tvm-customer-review-5.webp.asset.json";
-import video1 from "@/assets/tvm-video-1.webm.asset.json";
-import video2 from "@/assets/tvm-video-2.webm.asset.json";
-import video3 from "@/assets/tvm-video-3.webm.asset.json";
-import video4 from "@/assets/tvm-video-4.webm.asset.json";
-import video5 from "@/assets/tvm-video-5.webm.asset.json";
-import devSmartTv from "@/assets/tvm-smart-tv-v2.webp.asset.json";
-import devFirestick from "@/assets/tvm-firestick.webp.asset.json";
-import devAppleTv from "@/assets/tvm-apple-tv-box-v2.webp.asset.json";
-import devAndroid from "@/assets/tvm-android.webp.asset.json";
-import devIphone from "@/assets/tvm-iphone-ipad-v2.webp.asset.json";
-import devDator from "@/assets/tvm-dator-v2.webp.asset.json";
-import payVisa from "@/assets/pay-visa.svg.asset.json";
-import payMastercard from "@/assets/pay-mastercard.svg.asset.json";
-import payKlarna from "@/assets/pay-klarna.svg.asset.json";
-import paySwish from "@/assets/pay-swish.svg.asset.json";
-import payPaypal from "@/assets/pay-paypal.svg.asset.json";
-import payAmex from "@/assets/pay-american-express.svg.asset.json";
-import sportPl from "@/assets/tvm-ai-pl.webp.asset.json";
-import sportCl from "@/assets/tvm-ai-cl.webp.asset.json";
-import sportAllsv from "@/assets/tvm-ai-allsvenskan.webp.asset.json";
-import sportShl from "@/assets/tvm-ai-shl.webp.asset.json";
-import sportVinter from "@/assets/tvm-ai-vinter-os.webp.asset.json";
-import sportNations from "@/assets/tvm-ai-nations-cup.webp.asset.json";
-import sportLaliga from "@/assets/tvm-ai-laliga.webp.asset.json";
-import sportBiathlon from "@/assets/tvm-ai-biathlon.webp.asset.json";
-import sportEliteserien from "@/assets/tvm-ai-eliteserien.webp.asset.json";
-import chTv4 from "@/assets/logo-tv4.png.asset.json";
-import chViaplay from "@/assets/logo-viaplay.png.asset.json";
-import chHbo from "@/assets/logo-hbo.png.asset.json";
-import chNetflix from "@/assets/logo-netflix.png.asset.json";
-import chDisney from "@/assets/logo-disney.png.asset.json";
-import chEspn from "@/assets/logo-espn.png.asset.json";
-import chEurosport from "@/assets/logo-eurosport.png.asset.json";
-import chSky from "@/assets/logo-sky.png.asset.json";
-import chPrime from "@/assets/logo-prime.png.asset.json";
-import chDazn from "@/assets/logo-dazn.png.asset.json";
-import chFox from "@/assets/logo-fox.png.asset.json";
-import chAppleTv from "@/assets/logo-appletv.png.asset.json";
-import brandLogo from "@/assets/brand-logo.png.asset.json";
 
-const POSTERS = [poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8].map((a) => a.url);
+import channelsBundle from "@/assets/channels-bundle.webp";
+import poster1 from "@/assets/aquaman.webp";
+import poster2 from "@/assets/oppenheimer.webp";
+import poster3 from "@/assets/red-one.webp";
+import poster4 from "@/assets/venom-last-dance.webp";
+import poster5 from "@/assets/1QdXdRYfktUSONkl1oD5gc6Be0s.webp";
+import poster6 from "@/assets/36xXlhEpQqVVPuiZhfoQuaY4OlA.webp";
+import poster7 from "@/assets/hE3LRZAY84fG19a18pzpkZERjTE.webp";
+import poster8 from "@/assets/iDHzRALtZCzHVmx7uyjTTKvMAPB.webp";
+import testimonial1 from "@/assets/customer-review-1.webp";
+import testimonial2 from "@/assets/customer-review-2.webp";
+import testimonial3 from "@/assets/customer-review-3.webp";
+import testimonial4 from "@/assets/customer-review-4.webp";
+import testimonial5 from "@/assets/customer-review-5.webp";
+import video1 from "@/assets/onthelot_TikTokDownloader.com_b35cd.webm";
+import video2 from "@/assets/meeralakhani_TikTokDownloader.com_1c70b.webm";
+import video3 from "@/assets/lifewithlaurenk_TikTokDownloader.com_42a06.webm";
+import video4 from "@/assets/zenmaruu_TikTokDownloader.com_d268d.webm";
+import video5 from "@/assets/sabbytatt_TikTokDownloader.com_283a8.webm";
+import devSmartTv from "@/assets/smart-tv-v2.webp";
+import devFirestick from "@/assets/firestick.webp";
+import devAppleTv from "@/assets/apple-tv-box-v2.webp";
+import devAndroid from "@/assets/android.webp";
+import devIphone from "@/assets/iphone-ipad-v2.webp";
+import devDator from "@/assets/dator-v2.webp";
+import payVisa from "@/assets/bfad8a92-9e9d-4137-93e4-93b016bf825b.svg";
+import payMastercard from "@/assets/ecf99052-4ffc-47ef-b2a4-5fdc8afdd182.svg";
+import payKlarna from "@/assets/ea5feea8-dff7-4d64-9a30-0a1ec03267dc.svg";
+import paySwish from "@/assets/ecbdf0d3-ddf7-4540-a2a9-466612e2b87b.svg";
+import payPaypal from "@/assets/ea8c450e-ced4-4480-9093-9e1c6569203f.svg";
+import payAmex from "@/assets/ffdf7646-ab53-4ee0-8542-42322983c715.svg";
+import sportPl from "@/assets/ai-pl.webp";
+import sportCl from "@/assets/ai-cl.webp";
+import sportAllsv from "@/assets/ai-allsvenskan.webp";
+import sportShl from "@/assets/ai-shl.webp";
+import sportVinter from "@/assets/ai-vinter-os.webp";
+import sportNations from "@/assets/ai-nations-cup.webp";
+import sportLaliga from "@/assets/ai-laliga.webp";
+import sportBiathlon from "@/assets/ai-biathlon.webp";
+import sportEliteserien from "@/assets/ai-eliteserien.webp";
+import chTv4 from "@/assets/tv4.png";
+import chViaplay from "@/assets/viaplay.png";
+import chHbo from "@/assets/hbo.png";
+import chNetflix from "@/assets/netflix.png";
+import chDisney from "@/assets/disney-plus.png";
+import chEspn from "@/assets/espn.png";
+import chEurosport from "@/assets/eurosport.png";
+import chSky from "@/assets/sky-sports.png";
+import chPrime from "@/assets/prime-video.png";
+import chDazn from "@/assets/dazn.png";
+import chFox from "@/assets/fox.png";
+import brandLogo from "@/assets/brand-logo.png";
+
+const POSTERS = [poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8];
 const SPORTS = [
-  { label: "Premier League", img: sportPl.url },
-  { label: "Champions League", img: sportCl.url },
-  { label: "La Liga", img: sportLaliga.url },
-  { label: "Mundial 2026", img: sportNations.url },
-  { label: "UFC & Boxeo", img: sportShl.url },
-  { label: "Deportes de Invierno", img: sportBiathlon.url },
+  { label: "Premier League", img: sportPl },
+  { label: "Champions League", img: sportCl },
+  { label: "La Liga", img: sportLaliga },
+  { label: "Mundial 2026", img: sportNations },
+  { label: "UFC & Boxeo", img: sportShl },
+  { label: "Deportes de Invierno", img: sportBiathlon },
 ];
 
 type MediaItem = { type: "image" | "video"; src: string };
 const TESTIMONIAL_MEDIA: MediaItem[] = [
-  { type: "image", src: testimonial1.url },
-  { type: "video", src: video1.url },
-  { type: "image", src: testimonial2.url },
-  { type: "video", src: video2.url },
-  { type: "image", src: testimonial3.url },
-  { type: "video", src: video3.url },
-  { type: "image", src: testimonial4.url },
-  { type: "video", src: video4.url },
-  { type: "image", src: testimonial5.url },
-  { type: "video", src: video5.url },
+  { type: "image", src: testimonial1 },
+  { type: "video", src: video1 },
+  { type: "image", src: testimonial2 },
+  { type: "video", src: video2 },
+  { type: "image", src: testimonial3 },
+  { type: "video", src: video3 },
+  { type: "image", src: testimonial4 },
+  { type: "video", src: video4 },
+  { type: "image", src: testimonial5 },
+  { type: "video", src: video5 },
 ];
 
 export const Route = createFileRoute("/oferta-mundial")({
@@ -129,27 +129,26 @@ const PLANS: Plan[] = [
 ];
 
 const CHANNEL_LOGOS = [
-  { name: "TV4", img: chTv4.url },
-  { name: "Viaplay", img: chViaplay.url },
-  { name: "HBO", img: chHbo.url },
-  { name: "Netflix", img: chNetflix.url },
-  { name: "Disney+", img: chDisney.url },
-  { name: "ESPN", img: chEspn.url },
-  { name: "Eurosport", img: chEurosport.url },
-  { name: "Sky Sports", img: chSky.url },
-  { name: "Prime Video", img: chPrime.url },
-  { name: "DAZN", img: chDazn.url },
-  { name: "FOX", img: chFox.url },
-  { name: "Apple TV", img: chAppleTv.url },
+  { name: "TV4", img: chTv4 },
+  { name: "Viaplay", img: chViaplay },
+  { name: "HBO", img: chHbo },
+  { name: "Netflix", img: chNetflix },
+  { name: "Disney+", img: chDisney },
+  { name: "ESPN", img: chEspn },
+  { name: "Eurosport", img: chEurosport },
+  { name: "Sky Sports", img: chSky },
+  { name: "Prime Video", img: chPrime },
+  { name: "DAZN", img: chDazn },
+  { name: "FOX", img: chFox },
 ];
 
 const DEVICES = [
-  { name: "Smart TV", img: devSmartTv.url },
-  { name: "Firestick", img: devFirestick.url },
-  { name: "Apple TV", img: devAppleTv.url },
-  { name: "Android", img: devAndroid.url },
-  { name: "iPhone / iPad", img: devIphone.url },
-  { name: "Ordenador", img: devDator.url },
+  { name: "Smart TV", img: devSmartTv },
+  { name: "Firestick", img: devFirestick },
+  { name: "Apple TV", img: devAppleTv },
+  { name: "Android", img: devAndroid },
+  { name: "iPhone / iPad", img: devIphone },
+  { name: "Ordenador", img: devDator },
 ];
 
 const FEATURES = [
@@ -312,11 +311,11 @@ function OfertaMundialPage() {
       <header className="border-b bg-card/70 backdrop-blur sticky top-0 z-40">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <a href="/" className="flex items-center gap-2 font-semibold tracking-tight" aria-label="IPTVNord4K">
-            <img src={brandLogo.url} alt="IPTVNord4K" className="h-7 w-auto" />
+            <img src={brandLogo} alt="IPTVNord4K" className="h-7 w-auto" />
           </a>
           <a
             href="#bestall"
-            className="hidden sm:inline-flex items-center rounded-full bg-gradient-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-glow hover:brightness-110 transition"
+            className="hidden sm:inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-glow hover:brightness-110 transition"
           >
             Comprar ahora
           </a>
@@ -324,15 +323,14 @@ function OfertaMundialPage() {
       </header>
 
       {/* Hero */}
-      <section className="relative px-4 pt-16 pb-20 text-center bg-gradient-hero overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 -z-10 [background:radial-gradient(circle_at_50%_0%,oklch(0.7_0.19_255/0.12),transparent_50%)]" />
+      <section className="relative px-4 pt-16 pb-20 text-center bg-gradient-to-b from-primary/5 to-transparent overflow-hidden">
         <div className="mx-auto inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-sm font-medium text-accent-foreground">
           <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
           Campaña · 50% de descuento en todos los paquetes
         </div>
         <h1 className="mx-auto mt-6 max-w-3xl text-5xl sm:text-7xl font-bold leading-[1.02]">
           Todo lo que quieres ver.{" "}
-          <span className="italic font-medium bg-gradient-primary bg-clip-text text-transparent">A mitad de precio.</span>
+          <span className="italic font-medium text-primary">A mitad de precio.</span>
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
           30,000+ canales, todo el deporte y 200,000+ películas y series. Una suscripción — en todos tus dispositivos.
@@ -350,50 +348,21 @@ function OfertaMundialPage() {
         <div className="mt-8 flex flex-col items-center gap-4">
           <a
             href="#bestall"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-glow hover:brightness-110 hover:scale-[1.02] transition"
+            className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-base font-bold text-primary-foreground shadow-glow hover:brightness-110 transition sm:w-auto w-full"
           >
-            Elige tu paquete →
+            Obtener acceso ahora — 50% dto.
           </a>
-          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-promo px-5 py-2.5 text-sm font-semibold text-promo-foreground shadow-promo">
-            <Clock className="h-4 w-4" />
-            La oferta termina en {countdown}
-          </div>
+          <p className="text-xs text-muted-foreground">Garantía de devolución de 30 días · Sin permanencia</p>
         </div>
 
-        {/* Streaming bundle visual */}
-        <div className="mx-auto mt-14 max-w-md animate-float-glow">
-          <img
-            src={channelsBundle.url}
-            alt="Netflix, Prime Video, Disney+, Apple TV+ y Sky Sports — todo incluido"
-            className="w-full h-auto drop-shadow-2xl"
-          />
-        </div>
-      </section>
-
-      {/* Moving posters marquee */}
-      <section className="py-14 overflow-hidden bg-card/40 border-y">
-        <div className="text-center px-4 mb-8">
-          <div className="text-xs font-bold tracking-widest text-primary">200,000+ TÍTULOS</div>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold">
-            Películas y series en 4K — <span className="italic font-medium text-muted-foreground">actualizado semanalmente.</span>
-          </h2>
-        </div>
-        <div className="relative">
-          <div className="flex gap-4 animate-marquee w-max">
-            {[...POSTERS, ...POSTERS].map((src, i) => (
+        {/* Floating Posters */}
+        <div className="mt-16 relative h-[280px] sm:h-[400px] w-full max-w-5xl mx-auto">
+          <div className="absolute inset-0 flex items-center justify-center gap-4 sm:gap-6 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
+            {POSTERS.map((src, i) => (
               <div
                 key={i}
-                className="w-40 sm:w-48 aspect-[2/3] rounded-xl overflow-hidden shadow-card shrink-0"
-              >
-                <img src={src} alt="" loading="lazy" className="h-full w-full object-cover" />
-              </div>
-            ))}
-          </div>
-          <div className="mt-4 flex gap-4 animate-marquee-reverse w-max">
-            {[...POSTERS.slice().reverse(), ...POSTERS.slice().reverse()].map((src, i) => (
-              <div
-                key={i}
-                className="w-40 sm:w-48 aspect-[2/3] rounded-xl overflow-hidden shadow-card shrink-0"
+                className="relative h-[240px] sm:h-[340px] w-[160px] sm:w-[230px] shrink-0 rounded-xl overflow-hidden border shadow-2xl transition-transform hover:scale-105"
+                style={{ transform: `translateY(${i % 2 === 0 ? "20px" : "-20px"})` }}
               >
                 <img src={src} alt="" loading="lazy" className="h-full w-full object-cover" />
               </div>
@@ -402,325 +371,231 @@ function OfertaMundialPage() {
         </div>
       </section>
 
-      {/* World Cup banner */}
-      <section className="px-4">
-        <div className="mx-auto max-w-4xl rounded-2xl border border-primary/20 bg-accent/50 p-6 text-center">
-          <div className="text-xs font-bold tracking-widest text-primary">FIFA MUNDIAL 2026</div>
-          <p className="mt-2 text-lg">
-            No te pierdas ni un momento del Mundial de Fútbol 2026 — cada partido, estés donde estés.
+      {/* Stats/Logos */}
+      <section className="border-y bg-card/30 py-10">
+        <div className="mx-auto max-w-6xl px-4">
+          <p className="text-center text-xs font-bold uppercase tracking-widest text-muted-foreground">
+            Incluido en todos los paquetes
           </p>
-          <div className="mt-4 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
-            <span>4K UHD</span>·<span>30,000+ canales</span>·<span>Deportes en vivo & PPV</span>·
-            <span>Todos los dispositivos</span>·<span>Entrega en 15 min</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Order flow */}
-      <section id="bestall" className="px-4 py-20">
-        <div className="mx-auto max-w-6xl grid lg:grid-cols-[1fr_380px] gap-8">
-          {/* Left: steps */}
-          <div className="space-y-8">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full bg-promo/10 px-4 py-1.5 text-xs font-bold tracking-wide text-promo">
-                SOLO HOY: OFERTA ESPECIAL
-              </div>
-              <h2 className="mt-3 text-3xl font-bold">Pide tu paquete</h2>
-              <p className="mt-2 text-muted-foreground">
-                Pagas una vez — sin suscripciones, sin contratos.
-              </p>
-              <ol className="mt-4 flex flex-wrap gap-3 text-sm">
-                <li className="rounded-full bg-secondary px-3 py-1"><strong>1</strong> Elige paquete</li>
-                <li className="rounded-full bg-secondary px-3 py-1"><strong>2</strong> Elige dispositivo</li>
-                <li className="rounded-full bg-secondary px-3 py-1"><strong>3</strong> Pago seguro</li>
-              </ol>
-            </div>
-
-            {/* Plans */}
-            <div className="grid grid-cols-2 gap-3">
-              {PLANS.slice(0, 2).map((p) => (
-                <PlanCard key={p.id} plan={p} active={selected === p.id} onSelect={() => handleSelectPlan(p.id)} />
-              ))}
-              <div className="col-span-2">
-                <PlanCard plan={PLANS[2]} active={selected === PLANS[2].id} onSelect={() => handleSelectPlan(PLANS[2].id)} wide />
-              </div>
-            </div>
-
-            {/* Devices */}
-            <div id="devices" className="scroll-mt-24">
-              <h3 className="text-lg font-semibold">Elige tu dispositivo</h3>
-              <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {DEVICES.map((d) => {
-                  const active = device === d.name;
-                  return (
-                    <button
-                      key={d.name}
-                      onClick={() => handleSelectDevice(d.name)}
-                      className={`rounded-xl border-2 p-3 flex flex-col items-center gap-2 bg-card transition ${
-                        active ? "border-primary" : "border-border hover:border-primary/40"
-                      }`}
-                    >
-                      <img src={d.img} alt={d.name} className="h-16 w-16 object-contain" loading="lazy" />
-                      <span className="text-sm font-medium">{d.name}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Screens */}
-            <div>
-              <h3 className="text-lg font-semibold">Número de pantallas</h3>
-              <p className="text-sm text-muted-foreground">
-                Cada pantalla puede ver diferentes canales al mismo tiempo.
-              </p>
-              <div className="mt-3 grid grid-cols-3 sm:grid-cols-6 gap-2">
-                {[1, 2, 3, 4, 5, 6].map((n) => {
-                  const active = screens === n;
-                  return (
-                    <button
-                      key={n}
-                      onClick={() => setScreens(n)}
-                      className={`rounded-xl border-2 py-3 text-center bg-card transition ${
-                        active ? "border-primary" : "border-border hover:border-primary/40"
-                      }`}
-                    >
-                      <div className="text-lg font-bold">{n}</div>
-                      <div className="text-[11px] text-muted-foreground">
-                        {n === 1 ? "Incluido" : `+${(n - 1) * 20}€`}
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Includes */}
-            <div className="rounded-2xl bg-card p-6 shadow-card">
-              <h3 className="text-lg font-semibold">Incluido en todos los paquetes</h3>
-              <ul className="mt-3 grid sm:grid-cols-2 gap-2 text-sm">
-                {[
-                  "30,000+ Canales de TV en vivo",
-                  "App de reproducción integrada gratis",
-                  "Tecnología anti-congelación",
-                  "220,000+ títulos VOD (actualizado semanalmente)",
-                  "Subtítulos en español",
-                  "Deportes, Documentales, Cine, Niños...",
-                  "Todo el deporte mundial, PPV",
-                  "Canales 4K, UHD, FHD, HD",
-                  "Canales para adultos (opcional)",
-                  "Mundial de Fútbol 2026 en vivo",
-                  "Funciona en todos los dispositivos",
-                  "Soporte dedicado 24/7",
-                ].map((t) => (
-                  <li key={t} className="flex items-start gap-2">
-                    <Check className="h-4 w-4 mt-0.5 text-success shrink-0" />
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Right: summary card */}
-          <aside id="checkout-summary" className="lg:sticky lg:top-24 self-start scroll-mt-24">
-            <div className="rounded-2xl bg-card p-6 shadow-card">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold">Tu pedido</h3>
-                <ChevronDown className="h-4 w-4 text-muted-foreground" />
-              </div>
-              <dl className="mt-4 space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <dt className="text-muted-foreground">Paquete</dt>
-                  <dd>{plan.label}</dd>
-                </div>
-                <div className="flex justify-between">
-                  <dt className="text-muted-foreground">Precio base</dt>
-                  <dd>{plan.price}€</dd>
-                </div>
-                <div className="flex justify-between">
-                  <dt className="text-muted-foreground">Pantallas adicionales</dt>
-                  <dd>+{screenAdd}€</dd>
-                </div>
-                <div className="flex justify-between">
-                  <dt className="text-muted-foreground">Dispositivo</dt>
-                  <dd>{device ?? "—"}</dd>
-                </div>
-              </dl>
-              <div className="my-4 border-t" />
-              <div className="flex items-end justify-between">
-                <div>
-                  <div className="text-xs text-muted-foreground">Total a pagar</div>
-                  <div className="text-3xl font-bold">{total}€</div>
-                  <div className="text-xs text-muted-foreground">Pago único</div>
-                </div>
-                <div className="text-right">
-                  <div className="text-xs text-muted-foreground">Por mes</div>
-                  <div className="text-sm font-semibold text-success">{plan.perMonth}</div>
-                </div>
-              </div>
-              <div className="mt-4 rounded-xl bg-success/10 p-3 text-sm text-success">
-                Ahorras <strong>{savings}€</strong> comparado con el precio ordinario.
-              </div>
-              <button
-                onClick={handleCheckout}
-                className={`mt-5 w-full rounded-full bg-gradient-primary py-3.5 text-base font-semibold text-primary-foreground shadow-glow hover:brightness-110 transition ${
-                  shakeCta ? "animate-cta-shake" : ""
-                }`}
-              >
-                Ir a la caja segura — {total}€ →
-              </button>
-
-              <div className="mt-3 flex items-center justify-center gap-3 text-xs text-muted-foreground">
-                <Shield className="h-3.5 w-3.5" /> Pago encriptado · TLS 1.3
-              </div>
-              <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
-                {[
-                  { src: payVisa.url, alt: "Visa" },
-                  { src: payMastercard.url, alt: "Mastercard" },
-                  { src: payAmex.url, alt: "American Express" },
-                  { src: payKlarna.url, alt: "Klarna" },
-                  { src: paySwish.url, alt: "Swish" },
-                  { src: payPaypal.url, alt: "PayPal" },
-                ].map((p) => (
-                  <div
-                    key={p.alt}
-                    className="flex h-8 w-12 items-center justify-center rounded-md bg-white px-1.5 shadow-sm ring-1 ring-black/5"
-                  >
-                    <img src={p.src} alt={p.alt} className="max-h-5 max-w-full object-contain" loading="lazy" />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-4 rounded-2xl border border-success/30 bg-success/5 p-5">
-              <div className="flex items-center gap-2 font-semibold text-success">
-                <Award className="h-5 w-5" /> 30 días de devolución
-              </div>
-              <p className="mt-2 text-sm text-muted-foreground">
-                ¿No estás satisfecho? Te devolvemos cada céntimo — sin preguntas complicadas.
-              </p>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      {/* Channels */}
-      <section className="px-4 py-16">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="text-xs font-bold tracking-widest text-primary">TODOS LOS SERVICIOS</div>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold">
-            Todos los canales — <span className="italic font-medium text-muted-foreground">una sola app.</span>
-          </h2>
-          <p className="mt-3 text-sm sm:text-base text-muted-foreground">
-            30,000+ canales en vivo de todo el mundo — reunidos en un solo acceso. Sin suscripciones separadas.
-          </p>
-          <div className="mt-8 grid grid-cols-3 sm:grid-cols-4 gap-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
             {CHANNEL_LOGOS.map((c) => (
-              <div
-                key={c.name}
-                className="logo-tile aspect-[3/2] grid place-items-center rounded-xl bg-card shadow-card border border-border p-3 hover:border-primary/40 transition"
-              >
+              <div key={c.name} className="h-8 w-24 flex items-center justify-center">
                 <img src={c.img} alt={c.name} className="max-h-full max-w-full object-contain" />
               </div>
             ))}
           </div>
-          <p className="mt-6 text-xs text-muted-foreground">
-            …y 30,000+ canales más — deporte, cine, noticias, niños, internacional.
-          </p>
         </div>
       </section>
 
-      {/* Customer testimonial videos */}
-      <section className="py-20 overflow-hidden">
-        <div className="text-center px-4 mb-10">
-          <div className="text-xs font-bold tracking-widest text-primary">CLIENTES REALES</div>
-          <h2 className="mt-2 text-4xl font-bold">
-            Lo que dicen <span className="italic font-medium text-muted-foreground">nuestros clientes.</span>
-          </h2>
-        </div>
-        <div className="relative">
-          <div className="flex gap-4 animate-marquee w-max px-2">
-            {[...TESTIMONIAL_MEDIA, ...TESTIMONIAL_MEDIA].map((m, i) => (
-              <div
-                key={i}
-                className="relative w-44 sm:w-56 aspect-[9/16] rounded-2xl overflow-hidden shadow-card shrink-0 bg-card"
-              >
-                {m.type === "image" ? (
-                  <>
-                    <img src={m.src} alt="" loading="lazy" className="h-full w-full object-cover" />
-                    <div className="absolute inset-0 grid place-items-center">
-                      <div className="h-12 w-12 rounded-full bg-white/85 backdrop-blur grid place-items-center shadow-card">
-                        <svg viewBox="0 0 24 24" className="h-5 w-5 ml-0.5 fill-foreground"><path d="M8 5v14l11-7z"/></svg>
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <video
-                    src={m.src}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="h-full w-full object-cover"
-                  />
-                )}
+      {/* Features */}
+      <section className="py-24 px-4">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center">
+            <h2 className="text-3xl sm:text-5xl font-bold">¿Por qué elegir IPTVNord4K?</h2>
+            <p className="mt-4 text-muted-foreground">La experiencia de streaming más estable del mercado.</p>
+          </div>
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {FEATURES.map((f, i) => (
+              <div key={i} className="rounded-2xl border bg-card p-6 hover:border-primary/50 transition">
+                <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-5">
+                  <f.icon className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-bold">{f.title}</h3>
+                <p className="mt-2 text-muted-foreground leading-relaxed">{f.desc}</p>
               </div>
             ))}
           </div>
         </div>
-        <p className="mt-8 text-center text-sm text-muted-foreground px-4">
-          2,400+ clientes satisfechos · 4.9 de 5 de valoración media
-        </p>
       </section>
 
-      {/* Features */}
-      <section className="px-4 py-20 bg-card/50 border-y">
+      {/* Sports Grid */}
+      <section className="py-24 px-4 bg-accent/5">
         <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <div className="text-xs font-bold tracking-widest text-primary">POR QUÉ IPTVNORD4K</div>
-            <h2 className="mt-2 text-4xl font-bold">
-              Diseñado para que simplemente <span className="italic font-medium text-muted-foreground">funcione.</span>
-            </h2>
+          <div className="flex flex-col sm:flex-row items-end justify-between gap-6">
+            <div className="max-w-xl">
+              <h2 className="text-3xl sm:text-5xl font-bold">Todo el deporte en vivo</h2>
+              <p className="mt-4 text-muted-foreground">
+                No te pierdas ni un segundo. Premier League, Champions League, La Liga, F1, UFC y mucho más en 4K UHD.
+              </p>
+            </div>
+            <div className="flex items-center gap-2 text-primary font-semibold">
+              <Globe className="h-5 w-5" />
+              Canales de todo el mundo
+            </div>
           </div>
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {FEATURES.map((f) => {
-              const Icon = f.icon;
-              return (
-                <div key={f.title} className="rounded-2xl bg-card p-6 shadow-card">
-                  <div className="grid h-10 w-10 place-items-center rounded-xl bg-accent text-primary">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="mt-4 text-lg font-semibold">{f.title}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{f.desc}</p>
+          <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
+            {SPORTS.map((s, i) => (
+              <div key={i} className="group relative aspect-[4/5] overflow-hidden rounded-2xl border bg-card">
+                <img src={s.img} alt={s.label} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-lg font-bold text-white">{s.label}</p>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Sports & content */}
-      <section className="px-4 py-20">
-        <div className="mx-auto max-w-6xl text-center">
-          <div className="text-xs font-bold tracking-widest text-primary">TODO EL DEPORTE</div>
-          <h2 className="mt-2 text-4xl font-bold">
-            Cada partido — <span className="italic font-medium text-muted-foreground">sin interrupciones.</span>
-          </h2>
-          <p className="mt-3 text-muted-foreground">
-            La Liga, Champions League, Premier League, Mundial 2026, F1, UFC y más — en vivo hasta 4K.
-          </p>
-          <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
-            {SPORTS.map((s) => (
-              <div
-                key={s.label}
-                className="relative aspect-video rounded-xl overflow-hidden shadow-card"
-              >
-                <img src={s.img} alt={s.label} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                <div className="absolute bottom-2 left-3 right-3 text-left text-white text-sm font-semibold drop-shadow">
-                  {s.label}
+      {/* Pricing Section */}
+      <section id="bestall" className="py-24 px-4">
+        <div className="mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tight">Elige tu plan</h2>
+            <div className="mt-4 flex items-center justify-center gap-2 text-primary font-bold">
+              <Clock className="h-5 w-5" />
+              La oferta termina en: {countdown}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
+            {/* Steps */}
+            <div className="lg:col-span-7 space-y-10">
+              {/* Step 1: Plan */}
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="h-8 w-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">1</div>
+                  <h3 className="text-xl font-bold">Elige la duración</h3>
                 </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {PLANS.slice(0, 2).map((p) => (
+                    <PlanCard key={p.id} plan={p} active={selected === p.id} onSelect={() => handleSelectPlan(p.id)} />
+                  ))}
+                  <div className="col-span-1 sm:col-span-2">
+                    <PlanCard plan={PLANS[2]} active={selected === PLANS[2].id} onSelect={() => handleSelectPlan(PLANS[2].id)} wide />
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 2: Devices */}
+              <div id="devices" className="scroll-mt-24">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="h-8 w-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">2</div>
+                  <h3 className="text-xl font-bold">Elige tu dispositivo</h3>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {DEVICES.map((d) => (
+                    <button
+                      key={d.name}
+                      onClick={() => handleSelectDevice(d.name)}
+                      className={`flex flex-col items-center justify-center rounded-2xl border-2 p-4 transition ${
+                        device === d.name ? "border-primary bg-primary/5 shadow-sm" : "border-border hover:border-primary/40 bg-card"
+                      }`}
+                    >
+                      <img src={d.img} alt={d.name} className="h-12 w-12 object-contain mb-3" />
+                      <span className="text-xs font-semibold">{d.name}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Step 3: Screens */}
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="h-8 w-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">3</div>
+                  <h3 className="text-xl font-bold">¿Cuántas pantallas simultáneas?</h3>
+                </div>
+                <div className="flex items-center gap-4 p-4 rounded-2xl border bg-card">
+                  {[1, 2, 3, 4].map((n) => (
+                    <button
+                      key={n}
+                      onClick={() => setScreens(n)}
+                      className={`h-12 w-12 rounded-xl border-2 font-bold transition ${
+                        screens === n ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/40"
+                      }`}
+                    >
+                      {n}
+                    </button>
+                  ))}
+                  <div className="ml-auto text-sm text-muted-foreground hidden sm:block">
+                    {screens > 1 ? `+${(screens - 1) * 20}€ adicionales` : "Incluido en el precio"}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Checkout Summary */}
+            <div className="lg:col-span-5">
+              <div id="checkout-summary" className="sticky top-24 rounded-3xl border-2 border-primary/20 bg-card p-6 shadow-xl">
+                <h4 className="text-lg font-bold mb-6">Resumen del pedido</h4>
+                <div className="space-y-4">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-muted-foreground">Paquete {plan.label}</span>
+                    <span className="font-semibold">{plan.price}€</span>
+                  </div>
+                  {screens > 1 && (
+                    <div className="flex justify-between text-sm">
+                      <span className="text-muted-foreground">{screens} pantallas simultáneas</span>
+                      <span className="font-semibold">+{screenAdd}€</span>
+                    </div>
+                  )}
+                  <div className="flex justify-between text-sm">
+                    <span className="text-muted-foreground">Dispositivo</span>
+                    <span className="font-semibold">{device || "No seleccionado"}</span>
+                  </div>
+                  <div className="pt-4 border-t flex justify-between items-end">
+                    <div>
+                      <div className="text-3xl font-extrabold tracking-tight">{total}€</div>
+                      <div className="text-xs text-muted-foreground">Pago único · Sin suscripción</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-xs text-muted-foreground">Promedio/mes</div>
+                      <div className="text-sm font-bold text-success">{plan.perMonth}</div>
+                    </div>
+                  </div>
+                  <div className="rounded-xl bg-success/10 p-3 text-xs text-success font-medium">
+                    Ahorras {savings}€ comparado con el precio regular.
+                  </div>
+                </div>
+
+                <button
+                  onClick={handleCheckout}
+                  disabled={!device}
+                  className={`mt-8 w-full h-14 rounded-full bg-primary text-lg font-bold text-primary-foreground shadow-glow transition active:scale-95 ${
+                    !device ? "opacity-50 cursor-not-allowed grayscale" : "hover:brightness-110"
+                  }`}
+                >
+                  {!device ? "Selecciona un dispositivo" : `Pagar ahora — ${total}€`}
+                </button>
+
+                <div className="mt-4 flex items-center justify-center gap-3 text-[10px] text-muted-foreground uppercase tracking-widest font-bold">
+                  <Shield className="h-3.5 w-3.5" /> Pago 100% seguro
+                </div>
+
+                <div className="mt-6 flex flex-wrap items-center justify-center gap-3 opacity-60">
+                  <img src={payVisa} alt="Visa" className="h-4 w-auto" />
+                  <img src={payMastercard} alt="Mastercard" className="h-4 w-auto" />
+                  <img src={payAmex} alt="Amex" className="h-4 w-auto" />
+                  <img src={payKlarna} alt="Klarna" className="h-4 w-auto" />
+                  <img src={paySwish} alt="Swish" className="h-4 w-auto" />
+                  <img src={payPaypal} alt="Paypal" className="h-4 w-auto" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-24 px-4 bg-accent/5">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold">Lo que dicen nuestros clientes</h2>
+            <div className="mt-4 flex items-center justify-center gap-1">
+              {[1, 2, 3, 4, 5].map((n) => (
+                <Star key={n} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+              ))}
+              <span className="ml-2 font-bold text-lg">4.9/5</span>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
+            {TESTIMONIAL_MEDIA.map((m, i) => (
+              <div key={i} className="aspect-[9/16] rounded-2xl border bg-card overflow-hidden">
+                {m.type === "image" ? (
+                  <img src={m.src} alt="" loading="lazy" className="h-full w-full object-cover" />
+                ) : (
+                  <video src={m.src} muted loop playsInline autoPlay className="h-full w-full object-cover" />
+                )}
               </div>
             ))}
           </div>
@@ -728,89 +603,59 @@ function OfertaMundialPage() {
       </section>
 
       {/* FAQ */}
-      <section className="px-4 py-20 bg-card/50 border-y">
+      <section className="py-24 px-4">
         <div className="mx-auto max-w-3xl">
-          <div className="text-center">
-            <div className="text-xs font-bold tracking-widest text-primary">PREGUNTAS FRECUENTES</div>
-            <h2 className="mt-2 text-4xl font-bold">
-              Respuestas rápidas — <span className="italic font-medium text-muted-foreground">sin complicaciones.</span>
-            </h2>
-          </div>
-          <div className="mt-10 space-y-3">
-            {FAQ.map((f, i) => (
-              <details key={i} className="group rounded-2xl bg-card p-5 shadow-card">
-                <summary className="flex cursor-pointer list-none items-center justify-between font-semibold">
-                  {f.q}
-                  <ChevronDown className="h-4 w-4 transition group-open:rotate-180" />
-                </summary>
-                <p className="mt-3 text-sm text-muted-foreground">{f.a}</p>
-              </details>
+          <h2 className="text-3xl sm:text-5xl font-bold text-center mb-16">Preguntas frecuentes</h2>
+          <div className="space-y-4">
+            {FAQ.map((item, i) => (
+              <div key={i} className="rounded-2xl border bg-card p-6">
+                <h3 className="text-lg font-bold flex items-center justify-between">
+                  {item.q}
+                  <ChevronDown className="h-5 w-5 text-muted-foreground" />
+                </h3>
+                <p className="mt-3 text-muted-foreground leading-relaxed">{item.a}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="px-4 py-24 text-center">
-        <h2 className="text-4xl sm:text-5xl font-bold">¿Listo para empezar a ver?</h2>
-        <p className="mt-4 text-muted-foreground">Acceso en 15 minutos — empieza a ver ahora mismo.</p>
-        <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-promo px-5 py-2.5 text-sm font-semibold text-promo-foreground shadow-promo">
-          <Clock className="h-4 w-4" /> La oferta termina en {countdown}
+      {/* Footer */}
+      <footer className="border-t py-16 px-4 bg-card/30">
+        <div className="mx-auto max-w-6xl text-center">
+          <img src={brandLogo} alt="IPTVNord4K" className="mx-auto h-9 w-auto" />
+          <p className="mt-6 text-muted-foreground max-w-md mx-auto">
+            El proveedor de IPTV líder en el mercado con más de 30,000 canales y la mejor estabilidad.
+          </p>
+          <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm font-medium">
+            <a href="#" className="hover:text-primary transition">Términos y condiciones</a>
+            <a href="#" className="hover:text-primary transition">Política de privacidad</a>
+            <a href="#" className="hover:text-primary transition">Garantía de reembolso</a>
+            <a href="#" className="hover:text-primary transition">Contacto</a>
+          </div>
+          <div className="mt-12 flex items-center justify-center gap-4 opacity-40">
+            <img src={payVisa} alt="Visa" className="h-4 w-auto" />
+            <img src={payMastercard} alt="Mastercard" className="h-4 w-auto" />
+            <img src={payAmex} alt="Amex" className="h-4 w-auto" />
+            <img src={payKlarna} alt="Klarna" className="h-4 w-auto" />
+            <img src={paySwish} alt="Swish" className="h-4 w-auto" />
+            <img src={payPaypal} alt="Paypal" className="h-4 w-auto" />
+          </div>
+          <p className="mt-12 text-xs text-muted-foreground">
+            © 2026 IPTVNord4K. Todos los derechos reservados.
+          </p>
         </div>
-        <div className="mt-6">
-          <a
-            href="#bestall"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-glow hover:brightness-110 hover:scale-[1.02] transition"
-          >
-            Elige tu paquete →
-          </a>
-        </div>
-      </section>
-
-      <footer className="border-t bg-card/60 px-4 py-10 text-center text-sm text-muted-foreground">
-        <img src={brandLogo.url} alt="IPTVNord4K" className="mx-auto h-9 w-auto" />
-        <p className="mt-2">iptvnord4k.com · © {new Date().getFullYear()} — Todos los derechos reservados.</p>
       </footer>
 
-      {/* Sticky mobile checkout bar */}
-      <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 border-t bg-card/95 backdrop-blur shadow-[0_-8px_24px_-8px_rgba(0,0,0,0.4)]">
-        <div className="px-4 pt-3 pb-2 flex items-center justify-between gap-3">
-          <div className="leading-tight">
-            <div className="text-[11px] text-muted-foreground">La oferta termina en</div>
-            <div className="text-sm font-bold text-promo">{countdown}</div>
-          </div>
-          <a
-            href="#checkout-summary"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToId("checkout-summary");
-            }}
-            className={`flex-1 text-center rounded-full bg-gradient-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-glow ${
-              shakeCta ? "animate-cta-shake" : ""
-            }`}
-          >
-            Comprar ahora — {total}€
-          </a>
-        </div>
-        <div className="px-4 pb-2 flex flex-wrap items-center justify-center gap-1.5">
-          {[
-            { src: payVisa.url, alt: "Visa" },
-            { src: payMastercard.url, alt: "Mastercard" },
-            { src: payAmex.url, alt: "American Express" },
-            { src: payKlarna.url, alt: "Klarna" },
-            { src: paySwish.url, alt: "Swish" },
-            { src: payPaypal.url, alt: "PayPal" },
-          ].map((p) => (
-            <div
-              key={p.alt}
-              className="flex h-6 w-9 items-center justify-center rounded-sm bg-white px-1 shadow-sm ring-1 ring-black/5"
-            >
-              <img src={p.src} alt={p.alt} className="max-h-4 max-w-full object-contain" loading="lazy" />
-            </div>
-          ))}
-        </div>
+      {/* Mobile Floating CTA */}
+      <div className="sm:hidden fixed bottom-4 left-4 right-4 z-50">
+        <a
+          href="#bestall"
+          className="flex h-14 items-center justify-center rounded-full bg-primary text-lg font-bold text-primary-foreground shadow-glow active:scale-95 transition"
+        >
+          Comprar ahora — {total}€
+        </a>
       </div>
-      <div className="lg:hidden h-28" aria-hidden />
     </div>
   );
 }
