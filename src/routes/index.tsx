@@ -303,58 +303,8 @@ function IndexPage() {
         </div>
       </section>
 
-      {/* Features */}
-      <section className="py-24 px-4">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <h2 className="text-3xl sm:text-5xl font-bold">¿Por qué elegir IPTVNord4K?</h2>
-            <p className="mt-4 text-muted-foreground">La experiencia de streaming más estable del mercado.</p>
-          </div>
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {FEATURES.map((f, i) => (
-              <div key={i} className="rounded-2xl border bg-card p-6 hover:border-primary/50 transition">
-                <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-5">
-                  <f.icon className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-bold">{f.title}</h3>
-                <p className="mt-2 text-muted-foreground leading-relaxed">{f.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sports Grid */}
-      <section className="py-24 px-4 bg-accent/5">
-        <div className="mx-auto max-w-6xl">
-          <div className="flex flex-col sm:flex-row items-end justify-between gap-6">
-            <div className="max-w-xl">
-              <h2 className="text-3xl sm:text-5xl font-bold">Todo el deporte en vivo</h2>
-              <p className="mt-4 text-muted-foreground">
-                No te pierdas ni un segundo. Premier League, Champions League, La Liga, F1, UFC y mucho más en 4K UHD.
-              </p>
-            </div>
-            <div className="flex items-center gap-2 text-primary font-semibold">
-              <Globe className="h-5 w-5" />
-              Canales de todo el mundo
-            </div>
-          </div>
-          <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
-            {SPORTS.map((s, i) => (
-              <div key={i} className="group relative aspect-[4/5] overflow-hidden rounded-2xl border bg-card">
-                <img src={s.img} alt={s.label} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-lg font-bold text-white">{s.label}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="bestall" className="py-24 px-4">
+      {/* Pricing Section - Moved here */}
+      <section id="bestall" className="py-24 px-4 bg-accent/5">
         <div className="mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tight">Sección de Ofertas</h2>
@@ -435,6 +385,56 @@ function IndexPage() {
           <p className="mt-12 text-center text-sm text-muted-foreground flex items-center justify-center gap-2">
             <Shield className="h-4 w-4" /> Pago 100% seguro a través de WhatsApp
           </p>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="py-24 px-4">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center">
+            <h2 className="text-3xl sm:text-5xl font-bold">¿Por qué elegir IPTVNord4K?</h2>
+            <p className="mt-4 text-muted-foreground">La experiencia de streaming más estable del mercado.</p>
+          </div>
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {FEATURES.map((f, i) => (
+              <div key={i} className="rounded-2xl border bg-card p-6 hover:border-primary/50 transition">
+                <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-5">
+                  <f.icon className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-bold">{f.title}</h3>
+                <p className="mt-2 text-muted-foreground leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sports Grid */}
+      <section className="py-24 px-4 bg-accent/5">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col sm:flex-row items-end justify-between gap-6">
+            <div className="max-w-xl">
+              <h2 className="text-3xl sm:text-5xl font-bold">Todo el deporte en vivo</h2>
+              <p className="mt-4 text-muted-foreground">
+                No te pierdas ni un segundo. Premier League, Champions League, La Liga, F1, UFC y mucho más en 4K UHD.
+              </p>
+            </div>
+            <div className="flex items-center gap-2 text-primary font-semibold">
+              <Globe className="h-5 w-5" />
+              Canales de todo el mundo
+            </div>
+          </div>
+          <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
+            {SPORTS.map((s, i) => (
+              <div key={i} className="group relative aspect-[4/5] overflow-hidden rounded-2xl border bg-card">
+                <img src={s.img} alt={s.label} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-lg font-bold text-white">{s.label}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
